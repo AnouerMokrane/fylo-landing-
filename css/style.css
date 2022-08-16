@@ -1,0 +1,369 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Raleway:wght@400;700&display=swap');
+:root {
+    --Very-Dark-Blue: hsl(243, 87%, 12%);
+    --Desaturated-Blue: hsl(238, 22%, 44%);
+    --Bright-Blue: hsl(224, 93%, 58%);
+    --Moderate-Cyan: hsl(170, 45%, 43%);
+    --Light-Grayish-Blue: hsl(240, 75%, 98%);
+    --Ligh-Gray: hsl(0, 0%, 75%);
+}
+/* global roles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+body {
+    font-family: 'Open Sans', sans-serif;
+}
+h1,
+h2,
+h3,
+h4, button{
+    font-family: 'Raleway', sans-serif;
+}
+.container {
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: auto;
+    margin-right: auto;
+}
+/* small */
+@media (min-width:768px) {
+    .container {
+        width: 750px;
+    }
+}
+/* Medium */
+@media (min-width:992px) {
+    .container {
+        width: 970px;
+    }
+}
+/* large */
+@media (min-width:1200px) {
+    .container {
+        width: 1170px;
+    }
+}
+/* end global roles */
+header {
+    color: var(--Very-Dark-Blue);
+}
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 60px;
+}
+nav .links {
+    display: flex;
+}
+.links li {
+    margin-left: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.links li a {
+    padding-left: 30px;
+    text-decoration: none;
+    transition: 0.3s;
+}
+.links li a:hover {
+    color: var(--Bright-Blue);
+}
+img {
+    max-width: 100%;
+}
+.flex-box {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    margin-top: 50px;
+    color: var(--Very-Dark-Blue);
+}
+.flex-box > div {
+    flex: 1;
+}
+.flex-box .text h1 {
+    font-size: 34px;
+    margin-bottom: 15px;
+}
+.flex-box .text p {
+    font-size: 15px;
+    max-width: 500px;
+    margin-bottom: 20px;
+}
+.flex-box form input {
+    padding: 8px 15px;
+    max-width: 100%;
+    width: 270px;
+    margin-right: 10px;
+    outline: none;
+}
+.flex-box form input::placeholder {
+    color: var(--Ligh-Gray);
+    font-size: 12px;
+}
+.flex-box .btn-one {
+    padding: 10px 45px;
+    border: none;
+    background-color: var(--Bright-Blue);
+    color: white;
+    font-size: 12px;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: 0.3s ;
+}
+.btn-one:hover {
+    background-color: hsla(224, 93%, 58%, 0.829);
+}
+.middle-sec {
+    margin-top: 18rem;
+    color: var(--Very-Dark-Blue);
+    margin-bottom: 100px;
+}
+.middle-sec .text h2 {
+    font-size: 34px;
+    margin-bottom: 35px;
+}
+.middle-sec .text a {
+    color: var(--Moderate-Cyan);
+    text-decoration: none;
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: fit-content;
+    padding-bottom: 4px;
+    margin-bottom: 30px;
+    margin-right: 4px;
+    border-bottom: 1px solid var(--Moderate-Cyan);
+    transition: 0.3s;
+}
+.middle-sec .text a .arrow  {
+    margin-left: 6px;
+    display: flex;
+    transition: 0.3s;
+}
+.middle-sec .text a:hover ,
+.middle-sec .text a:hover .arrow use {
+    color: hsl(170deg 97% 47%);
+    border-bottom:1px solid hsl(170deg 97% 47%);
+    fill: hsl(170deg 97% 47%);
+}
+.testimonial {
+    max-width: 350px;
+    padding: 25px 25px;
+    box-shadow:  0 0 25px 10px rgb(0  0 0 / 10%);
+    font-family: 'Raleway', sans-serif;
+}
+.testimonial p {
+    margin-top: 10px;
+    line-height: 1.4;
+}
+.testimonial .user {
+    display: flex;
+    align-items: center;
+    
+}
+.testimonial .user img {
+    width: 32px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+.user figcaption {
+    display: flex;
+    flex-direction: column;
+    line-height: 1.5;
+}
+.user figcaption :first-child {
+    font-size: 11px;
+    font-weight: 700;
+}
+.user figcaption :last-child {
+    font-size: 9px;
+}
+.bottom-sec {
+    width: 100%;
+    background-color: var(--Desaturated-Blue);
+    padding: 90px;
+    color: white;
+}
+.bottom-sec .container {
+    display: flex;
+}
+.bottom-sec .container > div {
+    flex: 1;
+}
+.bottom-sec .text h3 {
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+.bottom-sec .text p {
+    font-size: 15px;
+    max-width: 460px;
+    color: rgba(255, 255, 255, 0.7);
+}
+.bottom-sec .container .bottom-form input {
+    padding: 10px 15px;
+    width: 350px;
+    border: none;
+    outline: none;
+    margin-bottom: 15px;
+}
+.bottom-sec .container .bottom-form input::placeholder{
+    color: var(--Ligh-Gray);
+}
+.bottom-sec  .btn-two {
+    display: block;
+    padding: 11px 20px;
+    color: white;
+    border: 0;
+    background-color: var(--Bright-Blue);
+    cursor: pointer;
+    font-family: 'Raleway', sans-serif;
+    font-size: 13px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+.bottom-sec .btn-two:hover {
+    background-color: rgb(86, 131, 255);
+}
+footer {
+    background-color: var(--Very-Dark-Blue);
+    padding: 80px;
+    color: white;
+    font-size: 14px;
+}
+footer .container .footer-logo {
+    margin-bottom: 15px;
+}
+footer .container .flex {
+    display: flex;
+    justify-content: space-between;
+}
+footer ul li {
+    margin-bottom: 15px;
+}
+footer .container .col img {
+    margin-right: 15px;
+}
+.social {
+    margin-right: 50px;
+    display: flex;
+}
+.social i {
+    position: relative;
+    font-size: 12px;
+    width: 30px;
+    height: 30px;
+    margin: 10px;
+    padding: 10px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid white;
+    border-radius: 50%;
+    transition: 0.3s;
+}
+.social i:hover {
+    color: var(--Bright-Blue);
+    border: 1px solid var(--Bright-Blue);
+}
+@media (max-width: 767px ) {
+    .logo {
+        width: 100px;
+    }
+    nav {
+        margin-top: 20px;
+    }
+    nav .links li a {
+        padding-left: 5px;
+    }
+    .flex-box {
+        flex-direction: column;
+        text-align: center;
+    }
+    .flex-box .text {
+        order: 2;
+    }
+    .flex-box .text h1 {
+        font-size: 28px;
+        margin-top: 15px;
+        margin-bottom: 25px;
+    }
+    .flex-box .text p {
+        font-size: 18px;
+    }
+    .flex-box form input {
+        width: 100%;
+        padding: 15px ;
+        border-radius: 5px;
+        margin-bottom: 15px;
+    }
+    .flex-box form .btn-one {
+        width: 100%;
+        padding: 17px;
+        font-size: 15px;
+        font-weight: bold;
+    }
+    .middle-sec .container{
+        margin-top: 15rem;
+        text-align: left;
+    }
+    .middle-sec .text h2 {
+        font-size: 19px;
+    }
+    .middle-sec .text p {
+        text-align: left;
+    }
+    .middle-sec .text a {
+        margin: 50px auto ;
+    }
+    .testimonial {
+        margin: 0 auto;
+        text-align: left;
+    }
+    .bottom-sec  {
+        padding: 60px 30px;
+        text-align: center;
+    }
+    .bottom-sec .container {
+        flex-direction: column;
+    }
+    .bottom-sec .container .text h3{
+        font-size: 20px;
+    }
+    .bottom-sec .container p {
+        font-size: 17px;
+        margin-bottom: 30px;
+    }
+    .bottom-sec .container .bottom-form  {
+        padding: 0 30px;
+    }
+    .bottom-sec .container .bottom-form  input {
+        width: 100%;
+        padding: 15px;
+    }
+    .bottom-sec .container .bottom-form  button {
+        width: 100%;
+        padding: 15px;
+    }
+    footer {
+        padding: 80px 20px ;
+    }
+    .footer-logo {
+        padding: 15px 0;
+    }
+    footer .flex {
+        flex-direction: column;
+        gap: 30px;
+    }
+    .social {
+        margin: 10px !important;
+        justify-content: center;
+    }
+}
